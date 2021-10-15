@@ -12,12 +12,14 @@ Scenario: Email não informado
     When Não digitou o email
     And Clicou em Cadastrar
     Then O Cadastro não é concluído
+    And Mostra mensagem "E-mail não informado"
     And O cliente é redirecionado para a página de login
 
 Scenario: Senha não informada
     When Não digitou a senha
     And Clicou em Cadastrar
     Then O Cadastro não é concluído
+    And Mostra a mensagem "Informe uma senha"
     And O cliente é redirecionado para a página de login
 
 Scenario: Senha divergente
@@ -25,6 +27,7 @@ Scenario: Senha divergente
     And Digitou a confirmação de senha como "1234"
     And Clicou em Cadastrar
     Then O Cadastro não é concluído
+    And Mostra a mensagem "As senhas informadas não conferem"
     And O cliente é redirecionado para a página de login
 
 Scenario: Nenhum campo preenchido
@@ -32,4 +35,5 @@ Scenario: Nenhum campo preenchido
     And Não digitou nenhum campo
     And Clicou em Cadastrar
     Then O Cadastro não é concluído
+    And Mostra a mensagem "Preencha os campos obrigatórios"
     And O cliente é redirecionado para a página de login
