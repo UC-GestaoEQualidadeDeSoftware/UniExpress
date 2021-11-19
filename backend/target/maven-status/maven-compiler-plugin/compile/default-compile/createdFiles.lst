@@ -1,0 +1,5 @@
+br\com\uniexpress\models\SignUpModel.class
+br\com\uniexpress\handlers\LoginApiHandler.class
+br\com\uniexpress\handlers\SignUpApiHandler.class
+br\com\uniexpress\Main.class
+br\com\uniexpress\models\LoginModel.class
