@@ -34,7 +34,7 @@ export default function Login({ history }) {
             style={{ borderRadius: 5 }}
             type="email"
             id="email"
-            placeholder="Seu e-mail"
+            placeholder="Digite o seu e-mail"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />

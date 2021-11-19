@@ -26,8 +26,8 @@ public class SignUpApiHandler implements HttpHandler {
         byte[] body = httpServerExchange.getInputStream().readAllBytes();
         String json = new String(body, StandardCharsets.UTF_8);
         SignUpModel model = SERIALIZER.fromJson(json, SignUpModel.class);
-        UserDAO dao = new UserDAO();
-        dao.save(model);
+//        UserDAO dao = new UserDAO();
+//        dao.save(model);
         httpServerExchange.setStatusCode(204);
     }
 

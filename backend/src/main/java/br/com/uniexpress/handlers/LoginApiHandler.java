@@ -27,8 +27,12 @@ public class LoginApiHandler implements HttpHandler {
         byte[] body = httpServerExchange.getInputStream().readAllBytes();
         String json = new String(body, StandardCharsets.UTF_8);
         LoginModel model = SERIALIZER.fromJson(json, LoginModel.class);
-        UserDAO dao = new UserDAO();
-        SignUpModel result = dao.login(model);
+//        UserDAO dao = new UserDAO();
+//        SignUpModel result = dao.login(model);
+        SignUpModel result = new SignUpModel();
+        result.name = "Lucas";
+        result.email = "lucas@live.com";
+        result.password = "202cb962ac59075b964b07152d234b70";
         httpServerExchange.getResponseSender().send(SERIALIZER.toJson(result));
     }
 
