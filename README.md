@@ -86,6 +86,17 @@ VALUES ('Obi-Wan Kenobi', 'obiwan@jedicouncil.com', md5('skywalker'));
 ```
 
 ## React
+![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square) 
+![Dependency Status](https://img.shields.io/badge/dependencies-react-blue)
+![Dependency Status](https://img.shields.io/badge/dependencies-webpack-9cf)
+![Dependency Status](https://img.shields.io/badge/dependencies-axios-orange)
+
+Tela de Login
+[![INSERT YOUR GRAPHIC HERE](https://i.imgur.com/ni4YmRa.png)]()
+Tela de Cadastro
+[![INSERT YOUR GRAPHIC HERE](https://i.imgur.com/ivwpcKc.png)]()
+Pagina Principal
+[![INSERT YOUR GRAPHIC HERE](https://i.imgur.com/NTzEi3o.png)]()
 
 ### Setup
 Para executar clone o repositorio [UniExpressReact](https://github.com/UC-GestaoEQualidadeDeSoftware/UniExpress/tree/main/UniExpressReact)
