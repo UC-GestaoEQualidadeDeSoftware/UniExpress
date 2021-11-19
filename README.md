@@ -85,6 +85,25 @@ INSERT INTO Users (name, email, password)
 VALUES ('Obi-Wan Kenobi', 'obiwan@jedicouncil.com', md5('skywalker'));
 ```
 
-## Execução da aplicação
+## React
 
-Informar aqui como executar a aplicação no browser...
+### Setup
+Para executar clone o repositorio [UniExpressReact](https://github.com/UC-GestaoEQualidadeDeSoftware/UniExpress/tree/main/UniExpressReact)
+### Setup
+> instalar usando npm ou yarn, vá a pasta onde feito o clone do repositório, abra o terminal e siga os comandos utilizando seu gerenciador de pacotes preferido
+```shell
+$ npm install 
+```
+ou 
+```shell
+$ yarn 
+```
+Apos isso rode o comando abaixo para subir a aplicação
+```shell
+$ npm start
+```
+ou
+```shell
+$ yarn start
+```
+A aplicação irá subir no caminho localhost:3000
