@@ -1,5 +1,3 @@
-
-
 <img height="50em"   align="left" src="https://user-images.githubusercontent.com/89614560/142313904-e129bf9e-611b-4c32-96d7-8ae2c531a55b.png"/>
 
 # UniExpress
@@ -13,8 +11,56 @@ Toda a aplicação foi construída de maneira a utilizar containers ou seja, se 
 Após instalado executar o seguinte comando para rodar a imagem do mysql
 
 ```bash
-$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
 ```
+
+Caso prefira existe um arquivo do docker-compose no projeto, o seu conteúdo é listado abaixo
+
+```yml
+---  
+version: "3.8"  
+  
+services:  
+  uniexpress-backend:  
+    build:  
+      context: .  
+      dockerfile: dockerfile  
+    image: uniexpress-backend:latest  
+    container_name: api-uniexpress-backend  
+    ports:  
+      - "8080:8080"  
+  networks:  
+      - uniexpress-nt  
+  
+  database:  
+    image: mysql  
+  container_name: db-mysql  
+    command: --default-authentication-plugin=mysql_native_password  
+    restart: always  
+    environment:  
+      MYSQL_ROOT_PASSWORD: example  
+    ports:  
+      - "3306:3306"  
+  networks:  
+      - uniexpress-nt  
+  
+networks:  
+  uniexpress-nt:  
+    name: uniexpress-nt  
+    driver: bridge  
+    ipam:  
+      driver: default  
+      config:  
+        - subnet: 10.10.1.0/29  
+          gateway: 10.10.1.1
+```
+
+Para rodar utilizando docker-compose utilize
+
+```bash
+$ docker-compose up -d --build 
+```
+
 
 ## Carga do banco
 
